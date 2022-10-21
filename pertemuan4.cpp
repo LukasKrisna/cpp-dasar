@@ -123,6 +123,21 @@ int main(int argc, char const *argv[])
 
         cout << endl;
     }
+    {
+        int i, j;
+        i = 1;
+        while (i < 10)
+        {
+            j = 1;
+            while (j < i)
+            {
+                cout << "*";
+                j++;
+            }
+            cout << endl;
+            i++;
+        }
+    };
 
     return 0;
 }
