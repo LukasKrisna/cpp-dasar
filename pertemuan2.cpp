@@ -20,11 +20,15 @@ int main()
         cin >> lebar;
         hasil = panjang * lebar;
     }
-    else if (bangunDatar = 2)
+    else if (bangunDatar == 2)
     {
         cout << "Masukan Jari-jari \n";
         cin >> jari;
         hasil = PI * pow(jari, 2);
+    }
+    else
+    {
+        cout << "Masukkan sesuai menu" << endl;
     }
     cout << "Hasil : " << hasil;
 

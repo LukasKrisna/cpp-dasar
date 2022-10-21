@@ -20,5 +20,14 @@ int main()
         counter++;
     }
 
+    cout << "========DO WHILE LOOP========" << endl;
+
+    int n = 1;
+    do
+    {
+        cout << "Hai" << endl;
+        n++;
+    } while (n <= 8);
+
     return 0;
 }
