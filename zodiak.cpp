@@ -10,6 +10,7 @@ int main()
     cin >> bulan;
     cout << "Masukkan tanggal : ";
     cin >> tanggal;
+    cout << "---------------------------------";
     cout << "\nZodiak Anda adalah ";
 
     if ((tanggal >= 21 && tanggal <= 31 && bulan == 3) || (tanggal >= 1 && tanggal <= 19 && bulan == 4))
@@ -65,6 +66,6 @@ int main()
         cout << "-" << endl;
         cout << "Tanggal dan/atau Bulan yang Anda masukkan salah" << endl;
     }
-
+    cout << "---------------------------------";
     return 0;
 }
