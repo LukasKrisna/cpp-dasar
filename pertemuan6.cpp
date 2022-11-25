@@ -1,28 +1,117 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
-float hitung_rata(int nilai[], int jml_index);
+#define PI 3.14
+
+void luas_persegi_panjang()
+{
+    int panjang, lebar;
+    float hasil;
+    cout << "Masukan Panjang dan lebar \n";
+    cin >> panjang;
+    cin >> lebar;
+    hasil = panjang * lebar;
+    cout << "Hasil : " << hasil;
+}
+void luas_lingkaran()
+{
+    int jari;
+    float hasil;
+    cout << "Masukan Jari-jari \n";
+    cin >> jari;
+    hasil = PI * pow(jari, 2);
+    cout << "Hasil : " << hasil;
+}
+void luas_segitiga()
+{
+    int alas, tinggi;
+    float hasil;
+    cout << "Masukan alas dan tinggi \n";
+    cin >> alas;
+    cin >> tinggi;
+    hasil = (alas * tinggi) / 2;
+    cout << "Hasil : " << hasil;
+}
+void volume_bola()
+{
+    int jari;
+    float hasil;
+    cout << "Masukan Jari-jari \n";
+    cin >> jari;
+    hasil = 4 / 3 * pow(jari, 3) * PI;
+    cout << "Hasil : " << hasil;
+}
+void volume_tabung()
+{
+    int jari, tinggi;
+    float hasil;
+    cout << "Masukan Jari-jari dan Tinggi \n";
+    cin >> jari;
+    cin >> tinggi;
+    hasil = PI * pow(jari, 2) * tinggi;
+    cout << "Hasil : " << hasil;
+}
+void volume_kerucut()
+{
+    int jari, tinggi;
+    float hasil;
+    cout << "Masukan Jari-jari dan Tinggi \n";
+    cin >> jari;
+    cin >> tinggi;
+    hasil = 1 / 3 * PI * pow(jari, 2) * tinggi;
+    cout << "Hasil : " << hasil;
+}
+void volume_kubus()
+{
+    int panjang, lebar, tinggi;
+    float hasil;
+    cout << "Masukan Panjang, Lebar, dan Tinggi \n";
+    cin >> panjang;
+    cin >> lebar;
+    cin >> tinggi;
+    hasil = panjang * lebar * tinggi;
+    cout << "Hasil : " << hasil;
+}
 
 int main()
 {
-    int jml_siswa = 5;
-    int nilai_mtk[jml_siswa] = {10, 5, 8, 9, 7};
-    int nilai_ipa[jml_siswa] = {8, 10, 6, 10, 10};
-    int nilai_bindo[jml_siswa] = {8, 9, 8, 10, 7};
-    cout << "Rata-rata nilai Matematika : " << hitung_rata(nilai_mtk, jml_siswa) << endl;
-    cout << "Rata-rata nilai IPA : " << hitung_rata(nilai_ipa, jml_siswa) << endl;
-    cout << "Rata-rata nilai Bhs Indonesia : " << hitung_rata(nilai_bindo, jml_siswa) << endl;
-    return 0;
-}
+    int bangunDatar;
 
-float hitung_rata(int nilai[], int jml_index)
-{
-    float rataan = 0;
-    for (int i = 0; i < jml_index; i++)
+    cout << "Masukan 1. untuk menghitung luas persegi panjang\n";
+    cout << "Masukan 2. untuk menghitung luas lingkaran \n";
+    cout << "Masukan 3. untuk menghitung luas segitiga \n";
+    cout << "Masukan 4. untuk menghitung volume bola \n";
+    cout << "Masukan 5. untuk menghitung volume tabung \n";
+    cout << "Masukan 6. untuk menghitung volume kerucut \n";
+    cout << "Masukan 7. untuk menghitung volume kubus \n";
+    cin >> bangunDatar;
+
+    switch (bangunDatar)
     {
-        rataan += nilai[i];
+    case 1:
+        luas_persegi_panjang();
+        break;
+    case 2:
+        luas_lingkaran();
+        break;
+    case 3:
+        luas_segitiga();
+        break;
+    case 4:
+        volume_bola();
+        break;
+    case 5:
+        volume_tabung();
+        break;
+    case 6:
+        volume_kerucut();
+        break;
+    case 7:
+        volume_kubus();
+        break;
     }
-    rataan = rataan / jml_index;
-    return rataan;
+
+    return 0;
 }
